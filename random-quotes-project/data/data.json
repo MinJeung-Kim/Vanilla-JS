@@ -1,6 +1,11 @@
 {
     "items": [
         {
+            "quote":
+                "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur sint iste optio placeat dolor labore, reprehenderit ipsum aspernatur blanditiis maiores.",
+            "author": " Author"
+            },
+        {
         "quote":
             "Life is too short and sweet to be spent by cribbing and complaining about things. Here are some random quotes about the most wonderful gift that we've got",
         "author": " Life"
