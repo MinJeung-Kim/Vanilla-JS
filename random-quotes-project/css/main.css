@@ -3,6 +3,12 @@ body {
   text-align: center;
 }
 
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 .conainer {
   width: 45%;
   background-color: #d8cfcc;
