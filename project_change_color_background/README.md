@@ -3,5 +3,5 @@
 1. "Click Me!" button Click
 2. Background Color Random Change
 
-![이미지 2](https://user-images.githubusercontent.com/40853793/107919695-1956a200-6faf-11eb-9ef6-d3c83536d44f.png)
+![change color](https://user-images.githubusercontent.com/79193369/108359734-b6c20800-7233-11eb-94c7-9bc805f5248e.gif)
 
