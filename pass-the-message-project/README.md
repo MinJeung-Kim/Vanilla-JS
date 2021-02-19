@@ -2,6 +2,9 @@
 
 This project challenges you to select the input element's value from the DOM. When you click on the “Submit” button you'll see the message inputted in the box in the “Last Message Delivered” Section.
 
+![submit String](https://user-images.githubusercontent.com/79193369/108462458-fc2c1700-72bf-11eb-8321-6b62acf8411b.gif)
+
+
 # What you should see:
 
 1. After you enter text into the input box, upon pressing the “Enter” key, your message should show up in the “Last Message Delivered” Section.
