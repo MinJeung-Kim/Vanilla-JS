@@ -7,6 +7,7 @@ function puzzleWord() {}
 const startGame = async () => {
   const puzzle = await getPuzzle('3');
 
+  // 추가 개발
   puzzleCount = puzzle.length;
 
   for (let i = 0; i < puzzleCount; i++) {
