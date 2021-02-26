@@ -1,40 +1,44 @@
 'user strict';
 const puzzleDiv = document.querySelector('#puzzle');
 const guesses = document.querySelector('#guesses');
-let puzzleCount;
 
-// 1. PUZZLE WORD 가져오기 (서버연결)
-
+// 1. PUZZLE 가져오기 (서버연결)
 const startGame = async () => {
   const puzzle = await getPuzzle('3');
 
-  puzzleCount = puzzle.length;
+  puzzleWordStringStar(puzzle);
+};
 
-  // 2. PUZZLE WORD `*`표시
-  for (let i = 0; i < puzzleCount; i++) {
-    console.log(`puzzle => ${puzzle.charAt(i)}`);
-
+// 2. PUZZLE `*`표시
+function puzzleWordStringStar(puzzle) {
+  for (let word of puzzle) {
+    console.log(`word => ${word} `);
     const span = document.createElement('span');
-    if (puzzle.charAt(i) === ' ') {
-      span.innerText = ' ';
-    } else {
+    if (word !== ' ') {
       span.innerText = '*';
+    } else {
+      span.innerText = '';
     }
     puzzleDiv.appendChild(span);
   }
-};
 
-let keyCount = 5;
+  document.addEventListener('keypress', compare);
+}
 
-// 3. 눌러진 키(KEY)와 서버에서 가져온 PUZZLE WORD 비교하기
-document.addEventListener('keypress', (event) => {
+// 3. 눌러진 키(KEY)와 서버에서 가져온 PUZZLE 비교하기
+function compare(event, word) {
   console.log(event.key);
-  if (keyCount < 0) {
-    keyCount = 0;
+  if (event.key === word) {
+    span.innerText = `${word}`;
   }
-  --keyCount;
-  guesses.innerText = `Guesses left: ${keyCount}`;
-});
+}
+
+// document.addEventListener('keypress', (event) => {
+//   console.log(event.key);
+//   if (event.key === word) {
+//     span.innerText = `${word}`;
+//   }
+// });
 
 document.querySelector('#reset').addEventListener('click', startGame);
 startGame();
